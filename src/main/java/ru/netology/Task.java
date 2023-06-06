@@ -2,6 +2,7 @@ package ru.netology;
 
 import java.util.Objects;
 
+
 public class Task {
     protected int id;
 
@@ -12,6 +13,9 @@ public class Task {
     public int getId() {
         return id;
     }
+
+    // Ниже находятся вспомогательные методы для корректной работы equals
+    // Переопределять их в наследниках не нужно
 
     @Override
     public boolean equals(Object o) {
@@ -25,9 +29,7 @@ public class Task {
     public int hashCode() {
         return Objects.hash(id);
     }
-
     public boolean matches(String query) {
         return false;
     }
-
 }
